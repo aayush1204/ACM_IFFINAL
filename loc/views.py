@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def loc(request):
+    return render(request, 'loc/loc.html')
