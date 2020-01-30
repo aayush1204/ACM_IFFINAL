@@ -2,7 +2,7 @@ from django.db import models
 
 class Core_committee(models.Model):
     name=models.CharField(max_length=255)
-    team=models.CharField(max_length=255, null=False)
+    post=models.CharField(max_length=255, null=False)
     pic=models.ImageField(upload_to="images/team")
     position=models.IntegerField(primary_key=True)
 
