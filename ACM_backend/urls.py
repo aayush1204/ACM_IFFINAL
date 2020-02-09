@@ -18,15 +18,17 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from events import views
+from team import views as view
+from contact import views as view2
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name="home"),
     path('events/',views.events,name="events"),
-
+    path('contact/',view2.contact,name="contact"),
     # path('events/', include('events.urls')),
     # path('if/', include('if.urls')),
     path('loc/', include('loc.urls')),
-    # path('team/', include('team.urls')),
+    path('team/', view.teams,name='team'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

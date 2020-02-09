@@ -1,69 +1,87 @@
 {% extends 'base.html' %}
 {% load static %}
-<link rel="shortcut icon" href="{% static 'images/acm-logo.ico' %}">
-<link rel="apple-touch-icon" href="{% static 'images/acm-logo.ico' %}">
-<script src="{% static 'assets/jquery-3.1.0.min.js' %}"></script>
-  <!-- Bootstrap Core CSS -->
-<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
-
-<!-- Theme CSS -->
-<link href="{% static 'assets/css/events.css' %}" rel="stylesheet">
-
-<!-- Custom Fonts -->
-<link href="{% static 'assets/css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-<link href="{% static 'assets/css/navbar.css' %}" rel='stylesheet' type='text/css'>
-<link href="{% static 'assets/css/footer.css' %}" rel='stylesheet' type='text/css'>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="{% static 'assets/js/navbar.js' %}"></script>
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<title>Events | DJSCOE-ACM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="djacm , djscoe acm, acm, dj acm, djscoe student chapter ">
+    <meta name="description" content="DJSCOE-ACM has established itself as a successful committee in terms of the number of members who have become a part of the ACM family and in terms of the seminars/workshops that have been conducted.">
+    <meta name="author" content="DJSCOE-ACM">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <style type="text/css">
-  .eventimage
-  {
-   height: 275px;
-  width: 350px;
+    <link rel="shortcut icon" href="{% static 'images/acm-logo.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'images/acm-logo.ico' %}"> <script src="{% static 'assets/jquery-3.1.0.min.js' %}"></script>
+      <!-- Bootstrap Core CSS -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
 
-  }
+    <!-- Theme CSS -->
+    <link href="{% static 'assets/css/events.css' %}" rel="stylesheet">
 
-  .portfolio-link{
-  height: 275px;
-  width: 350px;
+    <!-- Custom Fonts -->
+    <link href="{% static 'assets/css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/navbar.css' %}" rel='stylesheet' type='text/css'>
+    <link href="{% static 'assets/css/footer.css' %}" rel='stylesheet' type='text/css'>
 
-  }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'assets/js/navbar.js' %}"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  .Menu-icon-active{
-  background: grey;
-  }
-  .about-grid p{
+  ga('create', 'UA-68989382-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<style type="text/css">
+	.eventimage
+	{
+	 height: 275px;
+width: 350px;
+
+	}
+
+	.portfolio-link{
+height: 275px;
+width: 350px;
+
+	}
+
+.Menu-icon-active{
+background: grey;
+}
+.about-grid p{
   font-size: 15px;
-  }
+}
 
-  #portfolio{
+#portfolio{
     margin-top: 150px;
     position: relative;
     z-index: 0;
-  }
+}
 
-  @media(max-width: 800px){
+@media(max-width: 800px){
   #portfolio{
     margin-top: 100px;
   }
-  .eventimage
-  {
-   height: 225px;
-  width: 300px;
+.eventimage
+	{
+	 height: 225px;
+width: 300px;
 
-  }
+	}
 
-  }
-  body{
+}
+body{
     background:#E2E2E2;
-  }
-  .portfolio-modal .close-modal .lr .rl {
+}
+.portfolio-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
   background-color: #2C3E50;
@@ -73,14 +91,14 @@
   -webkit-transform: rotate(90deg);
   /* Safari and Chrome */
   z-index: 1052;
-  }
-  .portfolio-modal .modal-backdrop {
+}
+.portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
-  }
+}
 
-  .
-  portfolio-modal .close-modal .lr .rl {
+.
+portfolio-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
   background-color: #2C3E50;
@@ -90,13 +108,27 @@
   -webkit-transform: rotate(90deg);
   /* Safari and Chrome */
   z-index: 1052;
-  }
-  .portfolio-modal .modal-backdrop {
+}
+.portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
-  }
-  </style>
-  <section id="portfolio">
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+    <!-- Navigation -->
+    <!-- Header -->
+
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -382,7 +414,7 @@
                         <div class="modal-body">
                             <h2>Lines Of Code Hackathon</h2>
                             <img src="{% static 'assets/images/loc.jpg' %}" class="eventimage img-centered" alt="">
-                            <p>Lines Of Code(LOC) was a 24-Hour Hackathon by DJ ACM from 16th to 17th March, 2019.</p>
+                            <p>Lines Of Code(LOC) is a 24-Hour Hackathon by DJ ACM and will take place from 22nd to 23rd February, 2020.</p>
 
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -407,5 +439,9 @@
 
     <!-- Theme JavaScript -->
     <script src="{% static 'assets/js/freelancer.min.js' %}"></script>
+</body>
+
+
+
 
 {% endblock %}

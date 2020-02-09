@@ -11,11 +11,12 @@ class ProblemStatements(models.Model):
     def __str__(self):
         return self.title
 
-    def slug(self):
-        return slugify(self.title)
-
     def summary(self):
         return self.description[:100]
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(ProblemStatements, self).save(*args, **kwargs)
 
 class Sponsors(models.Model):
     logo=models.ImageField(upload_to='images/loc/sponsors')

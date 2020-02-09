@@ -10,4 +10,4 @@ class Core_committee(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        super(Product, self).save(*args, **kwargs)
+        super(Core_committee, self).save(*args, **kwargs)

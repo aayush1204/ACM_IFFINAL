@@ -1,5 +1,5 @@
-<html lang="en">
 {% load static %}
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
-    <link rel="stylesheet" href="{% static 'aos.css' %}"/>
+    <link rel="stylesheet" href="{% static 'loc/css/styles.css' %}"/>
+    <link rel="stylesheet" href="{% static 'loc/plugins/aos.css' %}"/>
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    let devfolioOptions = {
+        buttonSelector: '#devfolio-apply-now',
+        key: 'djacm-loc',
+    }
+
+    let script = document.createElement('script');
+    script.src = "https://apply.devfolio.co";
+    document.head.append(script);
+
+    script.onload = function () {
+        new Devfolio(devfolioOptions);
+    }
+
+    script.onerror = function () {
+        document.querySelector(devfolioOptions.buttonSelector).addEventListener('click', function () {
+            window.location.href = 'https://devfolio.co/external-apply/' + devfolioOptions.key;
+        });
+    }
+});
+</script>
     <title>LOC</title>
 </head>
 <body style="font-family: 'Nunito'"onload="typingEffect();">
@@ -26,7 +48,7 @@
     <div class="container-fluid" id="home" style="z-index: 1000;">
         <!--
             <div class="wrap" >
-            <img src="staticimages/logo.gif" class="mx-auto d-block" alt="tv" >
+            <img src="assets/images/logo.gif" class="mx-auto d-block" alt="tv" >
             <div class="textLoc" id="makehappy"></div>
         </div>
          -->
@@ -61,7 +83,7 @@
 
             <div class="col-xs-12 col-lg-12 col-md-12 text-center styleInfo" >
                 <div >
-                    <h1 class="font" style="font: size 50px;" data-aos="zoom-in"> About LOC</h1>
+                    <h1 class="font" style="font: size 50px;" data-aos="zoom-in"> ABOUT LOC</h1>
                     <div class="counter-modern-decor "></div>
                     <p data-aos="fade-right">
 
@@ -69,7 +91,8 @@
                     </p>
 
                     <div class="text-center p-3" data-aos="zoom-in">
-                        <button class="btn btn-lg btn-danger" style="background-color: #ff0920;">Register with Devfolio</button>
+                        <!--<button class="btn btn-lg btn-danger" style="background-color: #ff0920;">Register with Devfolio</button>-->
+                        <button class="btn btn-lg" style="background-color: #3770ff ; color:white" id="devfolio-apply-now"><svg class="logo" xmlns="http://www.w3.org/2000/svg" fill="#fff"viewBox="0 0 115.46 123.46" style="height:24px;width:24px;margin-right:8px"><path d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z" /><path d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"/></svg>Apply with Devfolio</button>
                     </div>
                     <p data-aos="fade-right">
                         Testing both, coding and coordination skills, LoC is split into 2 rounds. So, gear up and use this platform to showcase your excellence in various programming domains.
@@ -86,32 +109,62 @@
             <div class="row serveContent">
                 <div class=" col-lg-3 col-xl-3 col-md-3 col-xs-12">
                     <div class="serveCard">
-                        <div class="text-center serveIcon"><img src="{% static 'fintech.png' %}" class="modifyServe"/></div>
-                        <h3 class="text-center serveHead">Fintech</h3>
+                        <div class="text-center serveIcon"><img src="{% static 'loc/assets/images/weather.png' %}" class="modifyServe"/></div>
+                        <h3 class="text-center serveHead">Weather and Climate</h3>
                     </div>
                 </div>
                 <div class=" col-lg-3 col-xl-3 col-md-3 col-xs-12">
                     <div class="serveCard">
-                        <div class="text-center serveIcon"><img src="{% static 'agreement.png' %}" class="modifyServe"/></div>
-                        <h3 class="text-center serveHead">Social Cause</h3>
+                        <div class="text-center serveIcon"><img src="{% static 'loc/assets/images/laworder.png' %}" class="modifyServe"/></div>
+                        <h3 class="text-center serveHead">Crime,News and Law and Order</h3>
                     </div>
                 </div>
+
                 <div class=" col-lg-3 col-xl-3 col-md-3 col-xs-12">
                     <div class="serveCard">
-                        <div class="text-center serveIcon"><img src="{% static 'medical-report.png' %}" class="modifyServe"/></div>
-                        <h3 class="text-center serveHead">Healthcare</h3>
+                        <div class="text-center serveIcon"><img src="{% static 'loc/assets/images/education.png' %}" class="modifyServe"/></div>
+                        <h3 class="text-center serveHead">Education and Student Communities</h3>
                     </div>
                 </div>
+
                 <div class=" col-lg-3 col-xl-3 col-md-3 col-xs-12">
                     <div class="serveCard">
-                        <div class="text-center serveIcon"><img src="{% static 'poor.png' %}" class="modifyServe"/></div>
-                        <h3 class="text-center serveHead">Rural</h3>
+                        <div class="text-center serveIcon"><img src="{% static 'loc/assets/images/sports.png' %}" class="modifyServe"/></div>
+                        <h3 class="text-center serveHead">Sports Analytics</h3>
                     </div>
                 </div>
 
 
             </div>
 		</div>
+
+		 <div class=" text-center">
+                <h1 class="serveTop cmnHeader font ">SPONSORS</h1>
+            </div>
+
+		<div class="row ">
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center "><a href="https://matic.network/"><img class="sponsor" style="border-radius: 10px; width: 100%, height: auto" src="{% static 'loc/assets/images/Matic-Network_Logo-Light.png' %}"></a></div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://devfolio.co/"><img class="sponsor" style="border-radius: 10px" src="{% static 'loc/assets/images/Devfolio - White.png' %}"></a></div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://fold.money"><img class="sponsor" style="border-radius: 10px"src="{% static 'loc/assets/images/Logo White.png' %}"></a></div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://www.wolfram.com/language/"><img class="sponsor" style="border-radius: 10px" src="{% static 'loc/assets/images/wolframlogo.PNG' %}"></a></div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://codingblocks.com/"><img class="sponsor" style="border-radius: 10px" src="{% static 'loc/assets/images/CodingBlocks.jpeg' %}"></a></div>
+                 <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://balsamiq.com/"><img class="sponsor" style="border-radius: 10px" src="{% static 'loc/assets/images/Balsamiq.png' %}"></a></div>
+
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://www.hellointern.com/"><img class="sponsor styleInfo"style="border-radius: 10px" src="{% static 'loc/assets/images/HelloIntern.png' %}"></a></div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://www.linode.com/"><img class="sponsor" style="border-radius: 10px" src="{% static 'loc/assets/images/Linode.png' %}"></a></div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://cloudsploit.com/"><img class="sponsor" style="border-radius: 10px" src="{% static 'loc/assets/images/CloudSploit.png' %}"></a></div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://www.thesouledstore.com/"><img class="sponsor" style="border-radius: 10px" src="{% static 'loc/assets/images/SouledStore.png' %}"></a></div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center logosize"><a href="https://www.xinfin.org/"><img class="sponsor" style="border-radius: 10px" src="{% static 'loc/assets/images/XinFin2.jfif' %}"></a></div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 text-center"><a href="https://www.bugsee.com/"><img class="sponsor" style="border-radius: 10px" src="{% static 'loc/assets/images/bugsee3.png' %}"></a></div>
+                  </div>
+			</div>
 		<div style="padding: bottom 50px;" id="prize">
 			<h2 class="font" style="font-size: 60px; padding: 40px;">PRIZES</h2>
 			<div class="container">
@@ -120,7 +173,7 @@
 						<div class="flip-card">
 							<div class="flip-card-inner">
 							<div class="flip-card-front">
-								<img src="{% static 'medal.png' %}" alt="Avatar" style="height:250px;">
+								<img src="{% static 'loc/assets/images/medal.png' %}" alt="Avatar" style="height:250px;">
 							</div>
 							<div class="flip-card-back">
 								<h1 class="font" style="margin-top: 120px;">Winner</h1>
@@ -133,7 +186,7 @@
 						<div class="flip-card">
 							<div class="flip-card-inner">
 							<div class="flip-card-front">
-								<img src="{% static 'second.png' %}" alt="Avatar" style="height:250px;">
+								<img src="{% static 'loc/assets/images/second.png' %}" alt="Avatar" style="height:250px;">
 							</div>
 							<div class="flip-card-back">
 								<h1 class="font" style="margin-top: 120px;">Runner Up</h1>
@@ -146,7 +199,7 @@
 						<div class="flip-card">
 							<div class="flip-card-inner">
 							<div class="flip-card-front">
-								<img src="{% static 'third.png' %}" alt="Avatar" style="height:250px;">
+								<img src="{% static 'loc/assets/images/third.png' %}" alt="Avatar" style="height:250px;">
 							</div>
 							<div class="flip-card-back">
 								<h1 class="font" style="margin-top: 120px;">Second Runner Up</h1>
@@ -179,19 +232,19 @@
             <div class="timeline">
                 <div class="cover left" data-aos="zoom-in-right">
                   <div class="content " >
-                    <h2>1st Feb</h2>
+                    <h2>8th Feb</h2>
                     <p>Registration Begins</p>
                   </div>
                 </div>
                 <div class="cover right" data-aos="zoom-in-left">
                   <div class="content">
-                    <h2>12th Feb</h2>
+                    <h2>16th Feb</h2>
                     <p>Registration Ends</p>
                   </div>
                 </div>
                 <div class="cover left" data-aos="zoom-in-right">
                   <div class="content" >
-                    <h2>16th Feb</h2>
+                    <h2>18th Feb</h2>
                     <p>Shortlisted Teams out</p>
                   </div>
                 </div>
@@ -224,13 +277,13 @@
 
                         The goal of a hackathon is to create usable software with the goal of creating a functioning product by the end of the event.</p>
                 </div>
-                <button class="collapsible">What are the problem statements for the hackathon?</button>
-                <div class="contents">
-                    <p style="margin-top: 10px;">The problem statements will be declared soon. Once you’ve registered we’ll keep you posted with all details.</p>
-                </div>
+                <!--<button class="collapsible">What are the problem statements for the hackathon?</button>-->
+                <!--<div class="contents">-->
+                <!--    <p style="margin-top: 10px;">The problem statements will be declared soon. Once you’ve registered we’ll keep you posted with all details.</p>-->
+                <!--</div>-->
                 <button class="collapsible">How do we form a team?</button>
                 <div class="contents">
-                    <p style="margin-top: 10px;">Each team would comprise of 1-4 members including the team leader. All team members should be from same college; no inter-college teams are allowed. However, members from different branches of the same college/ institute can form a team.</p>
+                    <p style="margin-top: 10px;">Each team would comprise of 2-4 members including the team leader. All team members should be from same college; no inter-college teams are allowed. However, members from different branches of the same college/ institute can form a team.</p>
                 </div>
 
                 <button class="collapsible">What if this is my first hackathon?</button>
@@ -271,7 +324,7 @@
                     </div>
                 </div>
                 <div class=" text-center">
-                    <div class="branchHead"><a href="https://www.djacm.in/team.php" class="styleCom">Committee <span class="fa fa-angle-double-right"></span></a></div>
+                    <div class="branchHead"><a href="{% url 'team' %}" class="styleCom">Committee <span class="fa fa-angle-double-right"></span></a></div>
 
                 </div>
             </div>
@@ -296,7 +349,7 @@
                         </div>
                         <div class="footerLogo">
                             <a class="" >
-                                <img class="styleFootLogo" src="{% static 'acm-logo.png' %}"/>
+                                <img class="styleFootLogo" src="{% static 'loc/assets/images/acm-logo.png' %}"/>
                             </a>
                         </div>
 
@@ -366,9 +419,9 @@
 
 
             </footer>
-		<script src="{% static 'index.js' %} "></script>
+		<script src="{% static 'loc/index.js' %}"></script>
 
-        <script src="{% static 'aos.js' %}"></script>
+        <script src="{% static 'loc/plugins/aos.js' %}"></script>
         <script>
             AOS.init(
                 {
