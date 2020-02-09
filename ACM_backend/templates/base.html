@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    {% load staticfiles %}
+    {% load static %}
 		 <title>DJSCOE - ACM</title>
 		<meta name="google-site-verification" content="9fuxI7Q2pOBDB6msw0W93OcWM6ot2VdL_B6MyD4eLgc" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -90,13 +90,13 @@
         <div class="navbarr">                             <!-- When the device width is more than 800px -Desktop -->
             <ul>                                            <!-- refer to media query in navbar.css -->
 
-                <li><a class="active" href="">Home</a></li>
-                <li><a href="events.php">Events</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
                 <li><a href="team.php">Team</a></li>
                 <!--<li><a href="IF/index.html">Internship Fair</a></li>-->
                 <li><a href="djascii.php">DJ-ASCII</a></li>
-                <li><a href="loc">LOC</a></li>
-                <li ><a  href="contact.php">Contact</a></li>
+                <li><a href="{% url 'loc_home' %}">LOC</a></li>
+                <li ><a  href="">Contact</a></li>
                  <!--<li ><a  href="map.html">map</a></li>-->
 
 			</ul>
