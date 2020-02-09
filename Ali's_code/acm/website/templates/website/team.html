@@ -1,0 +1,276 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <title>Team | DJSCOE - ACM</title>
+    
+      <meta name="keywords" content="djacm , djscoe acm, acm, dj acm, djscoe student chapter ">
+      <meta name="description" content="DJSCOE-ACM has established itself as a successful committee in terms of the number of members who have become a part of the ACM family and in terms of the seminars/workshops that have been conducted.">
+      <meta name="author" content="DJSCOE-ACM"> 
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">  
+    
+      <script src="{% static 'assets/jquery-3.1.0.min.js' %}"></script>
+      <link href="{% static 'assets/css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+      <link rel="{% static 'assets/css/navbar.css' %}" type="text/css" href="">
+      <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+      <link href="{% static 'assets/css/bootstrap.min.css' %}" rel='stylesheet' type='text/css' />
+      <link href="{% static 'assets/css/navbar.css' %}" rel='stylesheet' type='text/css'>
+      <link href="{% static 'assets/css/team.css' %}" rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,500,600,200,700,800,900' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Raleway|Scope+One" rel="stylesheet">
+      <script src="{% static 'assets/js/navbar.js' %}"></script>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,500,600,200,700,800,900' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Raleway|Scope+One" rel="stylesheet">
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68989382-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <style type="text/css">
+     body{
+      background-color: #F5F5F5  ;
+      /*text-align: center;*/
+      }
+     
+h4{
+  font-size: 25px;
+  text-align: center;
+}
+h3{
+  text-align: center;
+}
+p{
+  font-weight: normal;
+}
+
+  hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #304957;; /* Modern Browsers */
+      width: 75%;
+      margin-top: 50px;
+}
+
+
+
+  </style>
+  </head>
+  <body>
+      <nav>                                                  <!-- refer to navbar.css  -->
+        <div class="logo">
+            DJSCOE
+        </div>
+        <div class="logo_image" >
+            <img src="{% static 'assets\images/logo1.jpg' %}" class="clip-img" > 
+        </div>
+        <div class="navbarr">                             <!-- When the device width is more than 800px -Desktop -->
+            <ul>                                            <!-- refer to media query in navbar.css -->
+               
+                 
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><a class="active" href="{% url 'team' %}">Team</a></li>
+               <!--<li><a href="LOC/loc.html">LOC</a></li>-->
+                 <!--<li><a href="internshipFair/Internship_Fair_Companies.html">Internship Fair</a></li>-->
+                <li><a href="{% url 'djascii' %}">DJ-ASCII</a></li>
+                <li><a href="{% url 'loc' %}">LOC</a></li>
+                <li ><a  href="{% url 'contact' %}">Contact</a></li>
+              
+            </ul>
+        </div>
+        <div class="Menu-icon">                                 <!-- In case of Mobile -->
+          <i class="fa fa-bars"></i>
+        </div>
+        
+
+    </nav>
+    <div class="container" >
+          <h1><b>Association for Computing Machinery</b></h1> <h1><b>Committee 2019-2020</b></h1>
+          <br>
+          <b>
+               <div class="row">                                                                          <!-- first row -->
+              <div class="col-md-4 "></div> <!-- empty space to get the next element in the center-->
+              <div class="col-md-4 team-member" style="margin-top:10px">
+                  <img src="{% static 'assets/images/hod.jpg' %}" class=" img-rounded">
+                  <p>Dr. Narendra Shekokar</p>
+                  <p>ACM Convenor</p>
+                  
+              </div>
+              <!-- <div class="col-md-4"></div> -->
+          </div>
+          <div class="row">                                                                                        <!-- fourth row -->
+              <!-- empty space -->
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/aruna.jpg' %}" class=" img-rounded">
+                  <p>Prof. Aruna Gawde</p>
+                  <p>ACM Co-ordinator</p>
+                 
+              </div>
+        <!-- <div class="col-md-2"></div> -->  
+              <div class="col-md-4 team-member">                                                                    
+                  <img src="{% static 'assets/images/pankaj.jpg' %}" class=" img-rounded">
+                  <p>Prof. Pankaj Sonawane</p>
+                  <p>ACM Co-ordinator</p>
+                  
+              </div>
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Pranit.jpeg' %}" class=" img-rounded">
+                  <p>Prof. Pranit Bari</p>
+                  <p>ACM Co-ordinator</p>
+                 
+              </div>
+          </div>
+          
+          <!--<h4> ACM Convenor: Dr. Prof. Narendra Shekokar</h4>-->
+          <!--<h4>ACM Co-ordinator: Prof. Aruna Gawde </br></h4>  -->
+          <!--<h4>ACM Co-ordinator: Prof. Pankaj Sonawane</h4>-->
+          <!--<h2 style="margin-top:40px; font-size:35px;">Committee</h2>-->
+          <div class="container" >
+         
+          <div class="row">                                                                          <!-- first row -->
+              <div class="col-md-4 "></div> <!-- empty space to get the next element in the center-->
+              <div class="col-md-4 team-member" style="margin-top:10px">
+                  <img src="{% static 'assets/images/Ankit.jpeg' %}" class=" img-rounded">
+                  <p>Ankit Gupta</p>
+                  <p>Chairperson</p>
+                  
+              </div>
+              <!-- <div class="col-md-4"></div> -->
+          </div>
+          <div class="row">                                                                          <!-- first row -->
+              <div class="col-md-4 "></div> <!-- empty space to get the next element in the center-->
+              <div class="col-md-4 team-member" style="margin-top:10px">
+                  <img src="{% static 'assets/images/Heeket.jpeg' %}" class=" img-rounded">
+                  <p>Heeket Mehta</p>
+                  <p>Co-Chairperson</p>
+                  
+              </div>
+              <!-- <div class="col-md-4"></div> -->
+          </div>
+          <div class="row">                                                                                         <!-- Second row -->
+              <div class="col-md-4"></div>  <!-- empty space to get the next element in the center-->
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Nishay.jpeg' %}" class=" img-rounded">
+                  <p>Nishay Madhani</p>
+                  <p>Secretary</p>
+                  
+              </div>
+              
+          </div>
+          
+          <div class="row">                                                                                        <!-- fourth row -->
+              <div class="col-md-2"></div> <!-- empty space -->
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Harshil.jpeg' %}" class=" img-rounded">
+                  <p>Harshil Jhaveri</p>
+                  <p>Vice-Chairperson (InfoTech)</p>
+                 
+              </div>
+        <!-- <div class="col-md-2"></div> -->  
+              <div class="col-md-4 team-member">  
+                  <img src="{% static 'assets/images/Kalpesh.jpeg' %}" class=" img-rounded">
+                  <p>Kalpesh Patil</p>
+                  <p>Vice-Chairperson (InfoTech)</p>
+                  
+              </div>
+          </div>
+          
+          <div class="row">                                                                                        <!-- fourth row -->
+               <!-- empty space -->
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Richa.jpeg' %}" class=" img-rounded">
+                  <p>Richa Sheth</p>
+                 <p>Vice-Chairperson (Marketing and Publicity)</p>
+                 
+              </div>
+        <!-- <div class="col-md-2"></div> -->  
+              <div class="col-md-4 team-member">  
+                  <img src="{% static 'assets/images/Sparsh.jpeg' %}" class=" img-rounded">
+                  <p>Sparsh Dalmia</p>
+                 <p>Vice-Chairperson (Marketing and Publicity)</p>
+                  
+              </div>
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Dharmik.jpeg' %}" class=" img-rounded">
+                  <p>Dharmik Parikh</p>
+                 <p>Vice-Chairperson (Sponsorship)</p>
+                  
+              </div>
+          </div>
+          
+
+ 
+          
+                    <div class="row">                                                                                        
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Nemil.jpeg' %}" class=" img-rounded">
+                  <p>Nemil Shah</p>
+                  <p>Vice-Chairperson (Event)</p>
+                  
+              </div>
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Jash.jpeg' %}" class=" img-rounded">
+                  <p>Jash Amin</p>
+                  <p>Vice-Chairperson (Admin)</p>
+                 </div>
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/devansh.jpeg' %}" class=" img-rounded">
+                  <p>Devansh Agarwal</p>
+                  <p>Vice-Chairperson (Admin)</p>
+                  
+             
+              
+                  
+              </div>
+              
+          </div>
+          
+          <div class="row">                                                                                        
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Romil.jpeg' %}" class=" img-rounded">
+                  <p>Romil Nisar</p>
+                  <p>Vice-Chairperson (Finance)</p>
+                  
+              </div>
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Ananya.jpeg' %}" class=" img-rounded">
+                  <p>Ananya Malik</p>
+                  <p>Vice-Chairperson (Editorial and Creatives)</p>
+                 </div>
+              <div class="col-md-4 team-member">
+                  <img src="{% static 'assets/images/Prem.jpeg' %}" class=" img-rounded">
+                  <p>Prem Bhajaj</p>
+                  <p>Vice-Chairperson (Editorial and Creatives)</p>
+                  
+             
+              
+                  
+              </div>
+              
+          </div>
+          
+          
+         
+    </div>
+  </div>
+  <hr >
+   <div class=" copy-right" style="font-family: 'Raleway', Arial, 'sans-serif'; font-weight:normal">
+      <div class="container">
+        <p class="pull-left"> Copyright &copy;DJSCOE-ACM<sup>TM</sup> </p>
+      <p class="pull-right">Developer: &nbsp<a href="">Chirag Jain</p>
+      <!-- <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a> -->
+      </div>
+    </div>
+
+    </body>
+</html>
