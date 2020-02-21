@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from events import views
 from team import views as view
 from contact import views as view2
+from ASCII import views as views3
 
 
 urlpatterns = [
@@ -30,5 +31,6 @@ urlpatterns = [
     # path('events/', include('events.urls')),
     # path('if/', include('if.urls')),
     path('loc/', include('loc.urls')),
+    path('ASCII/',views3.ASCII,name='ASCII'),
     path('team/', view.teams,name='team'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

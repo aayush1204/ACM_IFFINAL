@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'if.apps.IfConfig',
     'loc.apps.LocConfig',
     'team.apps.TeamConfig',
+    'contact.apps.ContactConfig',
+    'ASCII.apps.AsciiConfig',
 ]
 
 MIDDLEWARE = [
