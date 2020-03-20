@@ -1,5 +1,5 @@
 from django.db import models
-
+from slugify import slugify
 class Companies(models.Model):
     Company_name=models.CharField(max_length=255)
     about_company=models.TextField()
@@ -13,11 +13,11 @@ class Companies(models.Model):
     loctaion=models.TextField()
     perks=models.TextField()
     slug = models.SlugField(max_length=100, unique=True)
-    logo=models.ImageField(upload_to='images/intern_fair')
+    logo=models.ImageField(upload_to='if/images')
 
     def __str__(self):
         return self.Company_name
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        self.slug = slugify(self.Company_name)
         super(Companies, self).save(*args, **kwargs)
