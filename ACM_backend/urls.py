@@ -31,6 +31,7 @@ urlpatterns = [
     # path('events/', include('events.urls')),
     # path('if/', include('if.urls')),
     path('loc/', include('loc.urls')),
+    path('IF/', include('if.urls')),
     path('ASCII/',views3.ASCII,name='ASCII'),
     path('team/', view.teams,name='team'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
